@@ -1,0 +1,20 @@
+{
+  "name": "job-portal",
+  "version": "1.0.0",
+  "description": "It is the website that provde job to unemployeed person",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": "Ankit Srivastav",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.8.1",
+    "nodemon": "^3.1.7"
+  }
+}
