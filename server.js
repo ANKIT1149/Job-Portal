@@ -7,6 +7,7 @@ import cors from "cors";
 import morgan from 'morgan';
 import Authrouter from "./Routes/Auth.routes.js";
 import ErrorMIddleware from "./Middleware/ErrorMIddleware.js";
+import UserRouter from "./Routes/User.routes.js";
 
 // Config dotenv & database
 dotenv.config();
@@ -24,7 +25,7 @@ app.use(morgan("dev"));
 // app function
 app.use("/api/v1/test", testRouter);
 app.use("/api/v1/auth", Authrouter);
-
+app.use("/api/v1/user", UserRouter);
 // middleware declare
 app.use(ErrorMIddleware);
 

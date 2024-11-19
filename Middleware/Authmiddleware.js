@@ -4,7 +4,7 @@ const userAuth = async (req, res, next) => {
     const authheaders = req.headers.authorization;
     if (!authheaders || !authheaders.startsWith("Bearer")) return next("Invalid Token");
 
-    const token = authheaders.spilt("")[1]
+    const token = authheaders.split(" ")[1]
     try {
         const payload = JWT.verify(token, process.env.Secret_Key);
         req.user = { userId: payload.userId };
@@ -12,4 +12,6 @@ const userAuth = async (req, res, next) => {
     } catch (error) {
         next(error)
     }
-}
+};
+
+export default userAuth;   
