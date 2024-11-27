@@ -8,6 +8,7 @@ import morgan from 'morgan';
 import Authrouter from "./Routes/Auth.routes.js";
 import ErrorMIddleware from "./Middleware/ErrorMIddleware.js";
 import UserRouter from "./Routes/User.routes.js";
+import JobRouter from "./Routes/Job.routes.js";
 
 // Config dotenv & database
 dotenv.config();
@@ -26,6 +27,7 @@ app.use(morgan("dev"));
 app.use("/api/v1/test", testRouter);
 app.use("/api/v1/auth", Authrouter);
 app.use("/api/v1/user", UserRouter);
+app.use("/api/v1/job", JobRouter)
 // middleware declare
 app.use(ErrorMIddleware);
 
